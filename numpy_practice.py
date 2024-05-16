@@ -48,12 +48,12 @@ print(type(list))'''
 
 
 #----->>> 8. creating a multi-dimensional and checking its size using '.shape' attribute which is used to determine the dimensions of an array
-a = np.array([1,2,3])
+'''a = np.array([1,2,3])
 print(a)
 print(a.shape)
 b = np.array([(1,2,3,4),(4,5,6,7)])
 print(b)
-print(b.shape)
+print(b.shape)'''
 # here output for a is (3, ) representing 3 colums and for b is (2,4) since the first value represents 4 and second value represnts column
 #use 'dtype' attribute to define datatype of the values being stored in the array
 '''b = np.array([(1,2,3),(4,5,6)], dtype=bool)
@@ -83,14 +83,15 @@ print(array)'''
 print(array)''' # this prints an array having values within a range of (0-1)
 
 # creating a numpy array with random values within a specific range
+# first argument takes lower limit and second argument takes upper limit
 '''array =np.random.randint(10,15,(3,5))
 print (array)'''
 
 # cretaing an array with evenly spaced values
 '''array = np.linspace(1, 10, 7, dtype="int")
 print(array)''' #programmer specifies the number of values you want in an array, specified after the range provided in the argument above
-'''array = np.arange(1,10, 3)
-print(array)''' #programmer specifies the space it needs to be present in the values being present in the arrays
+'''array = np.arange(1,10, 2)
+print(array)''' #programmer specifies the gap between the elements as 3rd parameter for the function
 
 
 
@@ -108,29 +109,34 @@ print(type(array))'''
 '''array = np.random.randint(100,1000, (2,5))
 print(array)
 print(array.shape)
-print(array.ndim)
+print(array.ndim )
 print(array.size)
 print(array.dtype)'''
      
 
 
-# ----->>> Mathematical Operations
+# ----->>> 12. Mathematical Operations
 
 '''list1 =[1,2,3]
 list2 =[4,5,6]
 print(list1+list2)'''  # prints a list concatenated with both the given lists
 # case is different for numpy arrays, as by adding 2 numpy arrays, it results into summation of values
-array1= np.random.randint(10,30,(3,2))
-#array2 = np.random.randint(10,35,(3,2))
+# ADDITION>>>
+'''array1= np.random.randint(10,30,(3,2))
+array2 = np.random.randint(10,35,(3,2))
 print(array1)
-#print(array2,"\n")
-'''print(array1+array2)'''
+print(array2,"\n")
+print(array1+array2)'''
+
+# OPERATIONS
 # using arithmetic operators on arrays 
 '''print(array1 + array2)
 print(array1-array2)
 print(array1*array2)
 print(array1/array2)
 '''
+
+#PERFORMING OPERATIONS USING NUMPY ARITHMETIC FUNCTIONS
 #rithmetical functions are again being used for numpy array mathematical operations
 '''print(np.add(array1, array2))
 print(np.subtract(array1, array2))
@@ -138,14 +144,32 @@ print(np.multiply(array1, array2))
 print(np.divide(array1, array2))
 '''
 
-
 # ----->>> Array Manipulation
 #transpose of a matrix
 '''transpose_array = np.transpose(array1)    # using ' .transpose() ' function
 print(transpose_array)
 print(transpose_array.shape)
+
 transpose_array2 = array1.T                  # using ' .T ' to transpose
 print(transpose_array2)
 print(transpose_array2.shape)'''
+
 # Reshaping an array. It is different than transposing
-'''print(array1.reshape(6,1))''' # can only reshape an array based on its size...eg: 3x2 can be reshaped into 2x3, 1x6, 6x1 only
+'''array1 = np.arange(6)
+print(array1.reshape(2,3))''' # can reshape an array only into an array with the same size
+
+# .repeat() is a function which can duplicate the array elements specified the number of replications.
+'''array1 = np.arange(6)
+print(array1)
+array2 = np.repeat(array1, 2)
+print(array2)'''
+array1 = np.arange(6)
+array1 = array1.reshape(2,3)
+array2 = np.repeat(array1, 2, 0)
+array3 = np.repeat(array1, 2, 1)
+print(array2)
+print(array3)
+# here 1st parameter takes the array you want to apply duplication on
+# here 2nd parameter takes the number of repetitions 
+# here 3rd parameter takes the value of axis(axis value must not be out of bound of the dimension of matrix)
+
