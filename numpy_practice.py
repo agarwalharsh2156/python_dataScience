@@ -148,4 +148,25 @@ transpose_array2 = array1.T                  # using ' .T ' to transpose
 print(transpose_array2)
 print(transpose_array2.shape)'''
 # Reshaping an array. It is different than transposing
+<<<<<<< Updated upstream
 '''print(array1.reshape(6,1))''' # can only reshape an array based on its size...eg: 3x2 can be reshaped into 2x3, 1x6, 6x1 only
+=======
+'''array1 = np.arange(6)
+print(array1.reshape(2,3))''' # can reshape an array only into an array with the same size
+
+# .repeat() is a function which can duplicate the array elements specified the number of replications.
+'''array1 = np.arange(6)
+print(array1)
+array2 = np.repeat(array1, 2)
+print(array2)'''
+'''array1 = np.arange(6)
+array1 = array1.reshape(2,3)
+array2 = np.repeat(array1, 2, 0)
+array3 = np.repeat(array1, 2, 1)
+print(array2)
+print(array3)'''
+# here 1st parameter takes the array you want to apply duplication on
+# here 2nd parameter takes the number of repetitions 
+# here 3rd parameter takes the value of axis(axis value must not be out of bound of the dimension of matrix)
+
+>>>>>>> Stashed changes
