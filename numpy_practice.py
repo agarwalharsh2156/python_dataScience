@@ -8,9 +8,9 @@ import numpy as np
 # 	a. Allow several mathematical 	operations over numpy arrays
 # 	b. fatser execution time
 
-#----->>> 3. import numpy as np
+#----->>> 3. import numpy as np is used to import the numpy lib in your programs
 
-#----->>> 4. numpy uses numpy arrays which have less execution time and hence are efficient than other datatypes eg: list
+#----->>> 4. numpy is used to create numpy arrays which have less execution time and hence are efficient than other datatypes eg: list
 
 
 #----->>> 5. to check execution time of any program
@@ -48,12 +48,12 @@ print(type(list))'''
 
 
 #----->>> 8. creating a multi-dimensional and checking its size using '.shape' attribute which is used to determine the dimensions of an array
-'''a = np.array([1,2,3])
+a = np.array([1,2,3])
 print(a)
 print(a.shape)
 b = np.array([(1,2,3,4),(4,5,6,7)])
 print(b)
-print(b.shape)'''
+print(b.shape)
 # here output for a is (3, ) representing 3 colums and for b is (2,4) since the first value represents 4 and second value represnts column
 #use 'dtype' attribute to define datatype of the values being stored in the array
 '''b = np.array([(1,2,3),(4,5,6)], dtype=bool)
